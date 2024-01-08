@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="container__item">
+    <h1>Line Chart</h1>
+
+    <div>
+      <canvas baseChart width="500" height="500" [type]="'line'" [labels]="labels" [datasets]="datasets"
+        [options]="lineChartOptions" [legend]="chartLegend">
+      </canvas>
+    </div>
+  </div>
+
+  <div class="container__item">
+    <h1>Line Chart - with update every 10 seconds</h1>
+
+    <div>
+      <canvas baseChart width="500" height="500" [type]="'line'" [datasets]="singleDataset" [options]="lineChartOptions"
+        [legend]="chartLegend" [labels]="labels" #chartUpdate>
+      </canvas>
+    </div>
+  </div>
+
+  <div class="container__item">
+    <h1>Pie Chart</h1>
+
+    <div>
+      <canvas baseChart width="500" height="500" [type]="'pie'" [datasets]="pieDataset" [legend]="chartLegend" [options]="pieOptions"
+        [labels]="pieLabels">
+      </canvas>
+    </div>
+  </div>
+</div>
